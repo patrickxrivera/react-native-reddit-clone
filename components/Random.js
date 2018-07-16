@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import NavScreen from '../shared/NavScreen';
 
-class PostTab extends Component {
+class RandomTab extends Component {
   render() {
-    return <NavScreen>Post</NavScreen>;
+    return <NavScreen>Random</NavScreen>;
   }
 }
 
-export default PostTab;
+export default RandomTab;

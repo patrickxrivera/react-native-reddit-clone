@@ -1,23 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, Text, View } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { createStackNavigator, createBottomTabNavigator, TabBarBottom } from 'react-navigation';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    );
-  }
-}
+import LoginScreen from './components/Login';
+import { navigationOptionsBuilder } from './shared/utils';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const RootStack = createStackNavigator({ Login: LoginScreen }, navigationOptionsBuilder);
+
+const App = () => <RootStack />;
+
+export default App;
